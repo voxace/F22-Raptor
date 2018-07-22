@@ -4,6 +4,9 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/PBR*
+Assets/Wispy*
+Assets/TextMesh*
 
 # Visual Studio cache directory
 .vs/
