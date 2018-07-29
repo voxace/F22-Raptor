@@ -5,18 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MusicPlayer : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-        Invoke("LoadFirstScene", 2f);
+    // Called before Start
+    private void Awake()
+    {
+        // Don't destroy the music when we load the next scene
+        DontDestroyOnLoad(this.gameObject);
+    }
+
+    // Use this for initialization
+    void Start () {
+        Invoke("LoadFirstScene", 3f);
 	}
 
+    // Load the first scene
     void LoadFirstScene()
     {
         SceneManager.LoadScene(1);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
